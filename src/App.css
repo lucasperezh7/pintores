@@ -1,0 +1,171 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: white; /* Cambia esto al color que prefieras */
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Se coloca en la parte superior */
+  left: 0; /* Asegura que empiece desde el borde izquierdo */
+  right: 0; /* Asegura que se extienda hasta el borde derecho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+}
+
+.nav-link-spacing {
+  margin: 0 20px; /* Ajusta este valor según sea necesario */
+}
+
+#nav-button {
+  background-color: #5d6164; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 18px; /* Ajusta el relleno interno */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center;
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+#nav-button:hover {
+  background-color: #7b8086; /* Color de fondo al pasar el ratón */
+}
+
+
+/* BODY */ 
+
+.body-container {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-section {
+  position: relative;
+  width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla */
+  min-height: 100vh; /* Asegura que ocupe todo el alto de la pantalla */
+  background-size: cover; /* Asegura que la imagen cubra el contenedor completo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0); /* Filtro oscuro */
+  z-index: 1;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  padding: 20px 40px; /* Ajusta el espacio alrededor del texto */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  display: inline-block; /* Mantiene el tamaño del bloque solo alrededor del texto */
+}
+
+.overlay h1,
+.overlay p {
+  color: white; /* El texto será blanco para un mejor contraste */
+}
+
+.welcome-section, .second-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  min-height: 100vh;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-container {
+  flex: 1;
+  padding: 0 20px;
+  margin-left: 30px;
+}
+
+.text-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.services-title {
+  margin: 0;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.image-frame {
+  margin: 10px 0; /* Espacio arriba y abajo del recuadro de la imagen */
+  padding: 5px; /* Espacio interno del recuadro */
+  
+  border-radius: 5px; /* Esquinas redondeadas del recuadro (opcional) */
+  width: 200px; /* Ancho del recuadro (puedes ajustarlo) */
+  height: auto; /* Altura automática basada en la imagen */
+  text-align: center; /* Centra la imagen dentro del recuadro */
+}
+
+.services-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del recuadro */
+  height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+.services-text-container {
+  padding: 10px 0;
+  margin-left: 0;
+  max-width: 600px; /* Ajusta según el tamaño máximo deseado */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
