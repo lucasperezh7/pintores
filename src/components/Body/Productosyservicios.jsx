@@ -5,7 +5,7 @@ import yourImage from "../../assets/pintura.jpg"; // Importa la imagen
 function Productosyservicios() {
   return (
     <div className="services-section">
-      <h1 className="services-title">Nuestros Servicios</h1>
+      <h1 className="services-title">Nuestross Servicios</h1>
       <div className="image-frame">
         <img
           src={yourImage}
