@@ -1,6 +1,7 @@
 import React from "react";
 import "../../App.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
@@ -12,22 +13,18 @@ const NavbarComponent = () => {
           className="justify-content-center"
         >
           <Nav>
-            <Nav.Link className="nav-link-spacing" href="#servicios">
+            <Link to="/" className="nav-link-spacing">
               Inicio
-            </Nav.Link>
-            <Nav.Link className="nav-link-spacing" href="#servicios">
+            </Link>
+            <Link to="/servicios" className="nav-link-spacing">
               Productos y Servicios
-            </Nav.Link>
-            <Nav.Link className="nav-link-spacing" href="#nosotros">
+            </Link>
+            <Link to="/nosotros" className="nav-link-spacing">
               Conócenos
-            </Nav.Link>
-            <Nav.Link
-              className="nav-link-spacing"
-              id="nav-button"
-              href="#contacto"
-            >
+            </Link>
+            <Link to="/contacto" className="nav-link-spacing" id="nav-button">
               Contacto
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

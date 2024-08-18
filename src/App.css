@@ -20,11 +20,22 @@ body, html {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
 }
 
+/* Estilos para los enlaces del navbar */
 .nav-link-spacing {
-  margin: 0 20px; /* Ajusta este valor según sea necesario */
+  margin: 0 30px; /* Ajusta este valor según sea necesario */
+  margin-top: 15px;
+  color: #5d6164; /* Color de texto inicial */
+  text-decoration: none; /* Elimina la barra subrayada */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el enlace cuando el ratón está sobre él */
+.nav-link-spacing:hover {
+  color: #a9a9a9; /* Color gris clarito cuando se pasa el ratón */
 }
 
 #nav-button {
+  margin-top: 10px;
   background-color: #5d6164; /* Color de fondo */
   color: white; /* Color del texto */
   padding: 8px 18px; /* Ajusta el relleno interno */
@@ -36,6 +47,8 @@ body, html {
 #nav-button:hover {
   background-color: #7b8086; /* Color de fondo al pasar el ratón */
 }
+
+
 
 
 /* BODY */ 
@@ -100,6 +113,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  padding-top: 40px;
   min-height: 100vh;
 }
 
@@ -133,39 +147,187 @@ body, html {
 }
 
 
+/* App.css */
+
+/* Servicios SECTION*/
+
+/* App.css */
+
 .services-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea todo el contenido a la izquierda */
-  padding-left: 0;
-  margin-left: 0;
+   /* Centra horizontalmente todo el contenido */
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .services-title {
   margin: 0;
-  padding: 10px 0;
-  text-align: left;
+  padding: 40px 0;
+/* Centra el título */
+}
+
+.services-content {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 80px; /* Espacio entre la imagen, el texto y el botón */
+  margin-top: 20px;
 }
 
 .image-frame {
-  margin: 10px 0; /* Espacio arriba y abajo del recuadro de la imagen */
-  padding: 5px; /* Espacio interno del recuadro */
-  
-  border-radius: 5px; /* Esquinas redondeadas del recuadro (opcional) */
-  width: 200px; /* Ancho del recuadro (puedes ajustarlo) */
-  height: auto; /* Altura automática basada en la imagen */
-  text-align: center; /* Centra la imagen dentro del recuadro */
+  border-radius: 10px;
+  width: 250px;
+  height: auto;
+  text-align: center;
 }
 
 .services-image {
-  max-width: 100%; /* Asegura que la imagen no exceda el ancho del recuadro */
-  height: auto; /* Mantiene las proporciones de la imagen */
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
 }
 
 .services-text-container {
-  padding: 10px 0;
-  margin-left: 0;
-  max-width: 600px; /* Ajusta según el tamaño máximo deseado */
-  text-align: left; /* Alinea el texto a la izquierda */
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
 }
 
+.button-container {
+  align-self: flex-start;
+  margin-top: 40px; /* Alinea el botón al principio del contenedor */
+}
+
+.read-more-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .services-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .services-text-container, 
+  .button-container {
+    width: 100%; /* Hacer que el texto y el botón ocupen todo el ancho */
+  }
+}
+
+
+/*GALLERY SECTION*/
+
+
+
+/* Estilos generales de la nueva sección */
+/* App.css */
+
+/* Estilos generales de la nueva sección */
+.new-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px; /* Ajusta el padding si es necesario para el diseño */
+  box-sizing: border-box;
+}
+
+.new-section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.new-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra todo verticalmente */
+  width: 100%;
+  max-width: 1200px; /* Ajusta según el diseño de tu sitio */
+  min-height: 400px; /* Ajusta la altura mínima según sea necesario */
+}
+
+/* Estilo para el texto y el botón */
+.new-section-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  max-width: 50%;
+  padding-right: 20px; /* Espacio entre el texto y la imagen */
+  box-sizing: border-box;
+}
+
+.new-section-text-container p {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: calc(1rem + 1vw); /* Ajusta el tamaño del texto en función del ancho de la ventana */
+}
+
+.new-section-button {
+  padding: 10px 20px;
+  background-color: #e59515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: calc(0.875rem + 0.5vw); /* Ajusta el tamaño de la fuente del botón en función del ancho de la ventana */
+}
+
+.new-section-button:hover {
+  background-color: #ffbe0b;
+}
+
+/* Estilo para la imagen */
+.new-section-image-frame {
+  flex: 1;
+  width: 50%; /* Ocupa el 50% de la pantalla */
+  text-align: center;
+  overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+  position: relative;
+}
+
+.new-section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-section-image-frame:hover .new-section-image {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para el efecto de profundidad */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .new-section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-section-text-container,
+  .new-section-image-frame {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .new-section-text-container {
+    text-align: center;
+  }
+
+  .new-section-image-frame {
+    margin-top: 20px;
+  }
+}
